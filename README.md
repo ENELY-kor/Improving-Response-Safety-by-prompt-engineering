@@ -45,7 +45,7 @@ To minimize Context Deviation and ensure the final output addresses the user's o
  
  Detected unsafe responses are either rejected or safely sanitized using the sanitize_response(reply_txt) function before final output.
 # Result
-
+![Result](images/result.png)
 # Key Insights & Reflection
 * Insights on Prompt Engineering
 
