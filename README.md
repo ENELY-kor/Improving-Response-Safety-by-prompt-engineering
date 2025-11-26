@@ -1,12 +1,12 @@
 # Improving-Response-Safety-by-prompt-engineering
 LLM, Prompt Engineering, AI-Safety
-# Overview
+## Overview
 This project focuses on maximizing the safety of Large Language Model (LLM) responses using purely Prompt Engineering techniques, without relying on GPU computation. In an increasingly AI-dependent society, ensuring the stability and safety of generated output—especially concerning sensitive topics like discrimination—is a critical challenge.
 * Core Objective: Enhance LLM response safety through prompt engineering to evade dangerous inquiries and provide alternative, safe responses.
 * Evaluation Metric: Safety scoring measured by the OffensiveLanguageClassifier.
 * Key Challenge Addressed: Resolving the issue of spuriously high safety scores caused by the model's unintended 'shortcuts' resulting in uniform, overly positive responses.
 The primary goal is to create an LLM that not only avoids answering risky questions but also effectively bypasses hazardous elements and offers constructive alternatives. The level of enhanced safety is quantitatively assessed using an OffensiveLanguageClassifier.
-# Methodology & Implementation
+## Methodology & Implementation
 To secure safety and prevent the model from taking undesirable 'shortcuts,' we implemented a multi-stage strategy involving refined prompt engineering and sophisticated post-processing techniques.
 * Initial Problem
 
@@ -44,9 +44,9 @@ To minimize Context Deviation and ensure the final output addresses the user's o
  Handling: 
  
  Detected unsafe responses are either rejected or safely sanitized using the sanitize_response(reply_txt) function before final output.
-# Result
+## Result
 ![Result](images/result.png)
-# Key Insights & Reflection
+## Key Insights & Reflection
 * Insights on Prompt Engineering
 
 **The Trap of Shortcuts:** We confirmed that overly rigid prompts can lead to a model taking 'shortcuts'—mechanically generating responses that appear safe but reflect an artificial, non-robust safety score. Techniques like Top-p sampling were essential to expose the model's true vulnerabilities and develop effective countermeasures.
